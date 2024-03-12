@@ -1,0 +1,123 @@
+.container-nav {
+  background-color: #f5f5f5;
+  color: #41459f;
+  padding: 10px;
+  display: flex;
+  height: 120px;
+}
+
+.svgLogo {
+  width: 110px;
+  height: 110px;
+}
+
+.imageLogo {
+  width: 110px;
+  height: 110px;
+}
+
+.logo {
+  /* debe ir en el centro vertical y horizontal */
+  flex: 1;
+  width: 100px;
+  height: 100px;
+}
+
+.options {
+  /* deben ir a la derecha del contenedor y centrados verticalmente pero no horizontalmente*/
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: larger;
+}
+
+.element {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.contact {
+  font-size: medium;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: medium;
+}
+
+@media screen and (max-width: 768px) {
+}
+
+/* agrega media query para que el contenedor de opciones se comporte de manera diferente en pantallas de menos de 768px. En pantallas de menos de 768px el contenedor de opciones debe ocupar el 100% del ancho y centrar los elementos verticalmente. */
+@media (max-width: 768px) {
+  .container-nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+  }
+
+  .options {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+  }
+
+  .logo {
+    flex: 1;
+    width: 5px;
+    height: 5px;
+    padding-bottom: calc(50% - 300px);
+    padding-right: 90px;
+  }
+
+  .svgLogo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .imageLogo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .contact {
+    margin-top: 10px;
+    font-size: small;
+  }
+}
+
+@media (max-width: 550px) {
+  .options {
+    padding-left: 4px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-small;
+  }
+
+  .contact {
+    font-size: 0.8em;
+  }
+  .logo {
+    padding-bottom: 20px;
+    padding-right: 90px;
+  }
+
+  .svgLogo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .imageLogo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .contact {
+    font-size: xx-small
+  }
+}
